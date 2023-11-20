@@ -1,0 +1,15 @@
+.{
+    .name = "ev",
+    .version = "0.0.1",
+    .paths = .{
+        "src",
+        "build.zig",
+        "build.zig.zon",
+    },
+    .dependencies = .{
+        .wepoll = .{
+            .url = "git+https://codeberg.org/bytecraft/wepoll#a95e6260504a07aa9cfdd6bf34db2745dfff6573",
+            .hash = "1220e467ec8d7864e1a065d6b7e5c9dba21a98971982d91fcbe0238a74ab7d326740",
+        },
+    },
+}
