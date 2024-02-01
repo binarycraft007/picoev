@@ -3,6 +3,7 @@
     .version = "0.0.1",
     .paths = .{
         "src",
+        "include",
         "build.zig",
         "build.zig.zon",
     },
