@@ -8,8 +8,8 @@
     },
     .dependencies = .{
         .wepoll = .{
-            .url = "git+https://codeberg.org/bytecraft/wepoll#a95e6260504a07aa9cfdd6bf34db2745dfff6573",
-            .hash = "1220e467ec8d7864e1a065d6b7e5c9dba21a98971982d91fcbe0238a74ab7d326740",
+            .url = "git+https://codeberg.org/bytecraft/wepoll#ba650bf5adb01b802b2f5ebee095460e1969cbb0",
+            .hash = "122056fe0e406a94c0649aba64765bd72669feee76836b1543c637e4b474782ce915",
         },
     },
 }

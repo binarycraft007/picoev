@@ -3,6 +3,7 @@ const std = @import("std");
 pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
+    const t = target.result;
     const wepoll_dep = b.dependency("wepoll", .{
         .target = target,
         .optimize = optimize,
@@ -12,7 +13,7 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
-    const t = lib.target_info.target;
+    lib.root_module.link_libc = true;
     switch (t.os.tag) {
         .linux => {
             lib.addCSourceFile(.{
@@ -37,7 +38,6 @@ pub fn build(b: *std.Build) void {
     }
     lib.addIncludePath(.{ .path = "include" });
     lib.installHeadersDirectory("include", "");
-    lib.linkLibC();
     b.installArtifact(lib);
 
     const main_tests = b.addTest(.{
